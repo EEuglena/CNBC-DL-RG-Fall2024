@@ -35,7 +35,7 @@
     then $V$ is a \tbf{vector space} over $F$. Elements of $F$ and $V$ are called \tbf{scalars} and \tbf{vectors}, respectively.
 \end{definition}
 
-Sets such as $F^{n}$ (or something like $\mbb{R}^{n}$) are familiar example of vector spaces.
+Sets such as $F^{n}$ (or something like $\mbb{R}^{n}$) are familiar examples of vector spaces.
 
 \seprule
 
@@ -80,7 +80,7 @@ Sets such as $F^{n}$ (or something like $\mbb{R}^{n}$) are familiar example of v
     \end{itemize}
 \end{proof}
 \begin{definition}[Subspaces]
-    Let $W$ be a subset of $F$-vector space $V$. If $W$ becomes a $F$-vector space for the addition and scalar multiplication operations inherited from $V$, $W$ is a \tbf{subspace} of $V$. We denote this by $W \leq V$.
+    Let $W$ be a subset of $F$-vector space $V$. If $W$ becomes an $F$-vector space for the addition and scalar multiplication operations inherited from $V$, $W$ is a \tbf{subspace} of $V$. We denote this by $W \leq V$.
 \end{definition}
 \begin{obs}
     For $\varnothing \neq W \subseteq V$, $W \leq V$ if and only if
@@ -106,7 +106,7 @@ Lastly, we introduce an extremely important concept.
 
 % ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== =====
 
-\begin{definition}{Basis of a vector space}
+\begin{definition}[Basis of a vector space]
     A non-empty subset of $V$, $\mathfrak{B} \subseteq V$ is called a \tbf{basis} of $V$ if it satisfies the following properties.
     \begin{itemize}
         \item[(1)] $\left< \mathfrak{B} \right> = V$, where $\left< \mathfrak{B} \right>$ denotes the set of all linear combinations of vectors in $\mathfrak{B}$.
@@ -121,16 +121,16 @@ Lastly, we introduce an extremely important concept.
 \begin{example}
     Consider $F = \mbb{R}$ and $V = \mbb{R}^{3}$. Then we have \tbf{standard (Euclidean) basis}
     \[ e_{1} = \begin{bmatrix}1\\ 0\\ 0\end{bmatrix}, \; e_{2} = \begin{bmatrix}0\\ 1\\ 0\end{bmatrix}, \; e_{3} = \begin{bmatrix}0\\ 0\\ 1\end{bmatrix} \]
-    The basis is not unique; actually, there exists multiple different basis that spans $\mbb{R}^{3}$.
+    The basis is not unique; actually, there exist multiple different bases that span $\mbb{R}^{3}$.
 \end{example}
 
 We often denote a vector in $\mbb{R}^{3}$ as $v = [5, 2, 3]^{\msf{T}}$. In fact, this means
 \[ v = 5\begin{bmatrix}1\\ 0\\ 0\end{bmatrix} + 2\begin{bmatrix}0\\ 1\\ 0\end{bmatrix} + 3\begin{bmatrix}0\\ 0\\ 1\end{bmatrix} = 5e_{1} + 2e_{2} + 3e_{3} \]
-where 5, 2 and 3 indicates the \tbf{components} of $v$.
+where 5, 2 and 3 indicate the \tbf{components} of $v$.
 \begin{definition}[Components of vectors]
-    Let $\mathfrak{B} = \{ e_{1}, \,\cdots\, e_{n}\}$ be a $F$-basis of $V$. Then any vector $v \in V$ can be represented by the linear combination of $\{ e_{\mu} \}_{\mu = 1}^{n}$ (by definition).
+    Let $\mathfrak{B} = \{ e_{1}, \,\cdots\, e_{n}\}$ be an $F$-basis of $V$. Then any vector $v \in V$ can be represented by the linear combination of $\{ e_{\mu} \}_{\mu = 1}^{n}$ (by definition).
     \[ v = v^{1}e_{1} + v^{2}e_{2} + \cdots + v^{n}e_{n} = \sum_{\mu = 1}^{n} v^{\mu} e_{\mu} \]
-    We call these $v^{\mu}$'s as \tbf{components}.
+    We call these $v^{\mu}$'s \tbf{components}.
 \end{definition}
 \begin{remark}
     Note that basis of a vector space, $e_{\mu}$, has lower index, while component of a vector $v^{\mu}$ has upper index.
@@ -175,7 +175,7 @@ While talking about maps, we should mention these two.
     Let $L \,:\, V \rightarrow W$ be a linear map.
     \begin{itemize}
         \item[(1)] The \tbf{kernel} of $L$ is defined by $\ker L = L^{-1}(0) = \{ v \in V \,|\, L(v) = 0 \}$.
-        \item[(2)] The \tbf{image} of $L$ is defined by $\im L = L(V) = \{ L(V) \in W \,|\, v \in V \}$.
+        \item[(2)] The \tbf{image} of $L$ is defined by $\im L = L(V) = \{ L(v) \in W \,|\, v \in V \}$.
     \end{itemize}
 \end{definition}
 \begin{exer}
@@ -189,7 +189,7 @@ While talking about maps, we should mention these two.
         Hence, $v + w, av \in \ker L \;\Longrightarrow\; \ker L \leq V$.
         \item[(2)] Let $L(v), L(w) \in \im L$. Then
         \[ L(v) + L(w) = L(\underbrace{v+w}_{\in V}) \in \im L, \quad aL(v) = L(\underbrace{av}_{\in V}) \in \im L \; (a \in F) \]
-        gives $\im L \leq W$.
+        give $\im L \leq W$.
     \end{itemize}
 \end{proof}
 \newpage
@@ -203,19 +203,19 @@ While talking about maps, we should mention these two.
 \begin{proof}
     Let basis of $\ker L$ be $\{ e_{1} ,\, \cdots ,\, e_{r} \}$ (in other words, $\dim \ker L := r$).
 
-    Since $\ker L \leq V$, we can \tit{extend} the basis of $\ker L$ to the basis of $V$\footnote{$\because$ Basis extension theorem, which we neither mentioned nor proved.} as following.
+    Since $\ker L \leq V$, we can \tit{extend} the basis of $\ker L$ to the basis of $V$\footnote{$\because$ Basis extension theorem, which we neither mentioned nor proved.} as follows.
     \[ \mathfrak{B} = \{ e_{1} ,\, \cdots ,\, e_{r}, \textcolor{blue}{e_{r+1} ,\, \cdots ,\, e_{n}} \} \]
-    Here, note that $L(e_{1}) = \cdots = L(e_{r})$ (they are elements of $\ker L$).
+    Here, note that $L(e_{1}) = \cdots = L(e_{r}) = 0$ (they are elements of $\ker L$).
 
     \tbf{WTS}: $\{ L(e_{r+1}) ,\, \cdots ,\, L(e_{n}) \}$ is a basis of $\im L$.
     \begin{itemize}
-        \item[(1)] $\{ L(e_{r+1}) ,\, \cdots ,\, L(e_{n}) \}$ are linearly independent. In the following equation, we expect all $a^{k} \; (k = r+1, \cdots, n)$ should be zero.
+        \item[(1)] $\{ L(e_{r+1}) ,\, \cdots ,\, L(e_{n}) \}$ is linearly independent. In the following equation, we expect all $a^{k} \; (k = r+1, \cdots, n)$ should be zero.
         \[ \sum_{k = r+1}^{n} a^{k} L(e_{k}) = 0 = L \left(\sum_{k = r+1}^{n} a^{k}e_{k}\right) \]
         The last equal sign holds since $L$ is a linear map. Since substituting $a^{k}e_{k}$\footnote{This is written in Einstein notation.} into $L$ yields zero, $a^{k}e_{k} \in \ker L$. Hence, $a^{k}e_{k}$ can be represented by the linear combination of $\{ e_{1} ,\, \cdots ,\, e_{r} \}$.
         \[ \sum_{k=r+1}^{n}a^{k}e_{k} = \sum_{k=1}^{r}b^{k}e_{k} \]
         This equation can be arranged into a single summation.
         \[ \sum_{k=1}^{n}c^{k}e_{k} = 0 \]
-        where $c^{k} = b^{k}$ for $k = 1, \cdots, r$ and $c^{k} = -a^{k}$ for $k = r+1, \cdots, n$. Since $\{e_{k}\}_{k=1}^{n}$ is a basis of $V$, these vectors are linearly independent - hence, all $c^{k}$ are zero. Therefore, all $a^{k} \; (k = r+1, \cdots, n)$ becomes zero automatically.
+        where $c^{k} = b^{k}$ for $k = 1, \cdots, r$ and $c^{k} = -a^{k}$ for $k = r+1, \cdots, n$. Since $\{e_{k}\}_{k=1}^{n}$ is a basis of $V$, these vectors are linearly independent - hence, all $c^{k}$ are zero. Therefore, all $a^{k} \; (k = r+1, \cdots, n)$ become zero automatically.
         \item[(2)] $\left< L(e_{r+1}) ,\, \cdots ,\, L(e_{n}) \right> = \im L$. 
         
         This is straightforward; for arbitrary $L(v) \in \im L$,
@@ -234,12 +234,13 @@ While talking about maps, we should mention these two.
 \begin{definition}[Vector space of linear maps]
     Let $\mathfrak{L}(V,W)$ be the set of all linear maps from $V$ to $W$.
     \[ \mathfrak{L}(V,W) = \{ L \,:\, V \rightarrow W \,|\, L \, \text{is linear} \} \]
-    By defining addition and scalar multiplication of linear maps as following,
+    By defining addition and scalar multiplication of linear maps as follows,
     \begin{align*}
         \text{addition} \,&: \quad (L+M)(v) := L(v) + M(v) \\
         \text{scalar multiplication} \,&: \quad (aL)(v) := aL(v)
     \end{align*}
-    $(L, M \in \mathfrak{L}(V, W),\; v \in V,\; a \in F)$ $\mathfrak{L}(V,W)$ becomes a \tbf{vector space} of linear maps.
+    \[ (L, M \in \mathfrak{L}(V, W),\; v \in V,\; a \in F) \]
+    $\mathfrak{L}(V,W)$ becomes a \tbf{vector space} of linear maps.
 \end{definition}
 
 \seprule
@@ -258,17 +259,17 @@ Now we prove an important theorem that helps us grasp concepts of dual basis and
     $\dim V^{\ast} = \dim V$.
 \end{theorem}
 \begin{proof}
-    Let $\mathfrak{B} = \{e_{1} ,\, \cdots ,\, e_{n} \} = \{ e_{\mu} \}$ be a basis of $V$ ($\dim V := n$).
+    Let $\mathfrak{B} = \{e_{1} ,\, \cdots ,\, e_{n} \} = \{ e_{\nu} \}$ be a basis of $V$ ($\dim V := n$).
 
     Define some linear maps (or dual vectors) $e^{\mu} \,:\, V \rightarrow F$ as
     \[ e^{\mu}(e_{\nu}) = \delta^{\mu}{}_{\nu} \]
-    where $\delta^{\mu}{}_{\nu}$ is the usual Kroenecker delta\footnote{You may wonder why one index is superscripted while the other is subscripted. This will be clarified in the next week's lecture.}.
+    where $\delta^{\mu}{}_{\nu}$ is the usual Kronecker delta\footnote{You may wonder why one index is superscripted while the other is subscripted. This will be clarified in the next week's lecture.}.
 
     \tbf{WTS}: $\mathfrak{B}^{\ast} = \{ e^{\mu} \}$ is a basis of $V^{\ast}$\footnote{Proving this statement gives our original claim immediately.}.
     \begin{itemize}
         \item[(1)] $\mathfrak{B}^{\ast}$ is linearly independent: let's start from $a_{\mu}e^{\mu} = 0$. Then
         \[ (v \in V) \quad a_{\mu} e^{\mu}(v) = 0 \]
-        However, since $e^{\mu}$ is a linear map, it suffices to check their behavior at the basis of $V$, $e_{nu}$\footnote{This has deeper context in standard linear algebra course, and can be shown. However, we skip the detail.}. Hence
+        However, since $e^{\mu}$ is a linear map, it suffices to check their behavior at the basis of $V$, $e_{\nu}$\footnote{This has deeper context in standard linear algebra course, and can be shown. However, we skip the detail.}. Hence
         \[ a_{\mu} e^{\mu}(e_{\nu}) = a_{\textcolor{red}{\mu}}\delta^{\textcolor{red}{\mu}}{}_{\nu} = a_{\nu} = 0 \]
         \item[(2)] $\left<\mathfrak{B}^{\ast}\right> = V^{\ast}$? For arbitrary $w \in V^{\ast}$, it can be expanded into
         \[ w = w(e_{1})e^{1} + w(e_{2})e^{2} + \cdots + w(e_{n})e^{n} := w_{\mu}e^{\mu} \]
@@ -284,7 +285,7 @@ Now we prove an important theorem that helps us grasp concepts of dual basis and
 
 In summary,
 \begin{itemize}
-    \item[-] Let $V$ be a $F$-vector space, and $v \in V$ be a vector. Then $v$ can be expanded into the linear combination of basis vectors.
+    \item[-] Let $V$ be an $F$-vector space, and $v \in V$ be a vector. Then $v$ can be expanded into the linear combination of basis vectors.
     \[ \boxed{v = v^{\mu} e_{\mu}} \]
     \item[-] The concept of dual space naturally follows from the original vector space $V$. The dual vector space $V^{\ast} = \mathfrak{L}(V,W)$ has dual vectors (or covectors) as elements: $w \in V^{\ast}$ and $w \,:\, V \rightarrow F$. The dual vector can be expanded into dual basis.
     \[ \boxed{w = w_{\mu} e^{\mu}} \]
